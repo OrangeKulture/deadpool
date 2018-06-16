@@ -1,0 +1,60 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: url('../images/main_bg1.jpg')no-repeat;
+}
+
+h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+hr {
+    height: 1px;
+    background: rgba(198, 39, 44,0.6);
+    background: rgba(255, 255, 255,0.2);
+    width: 60%;
+    margin: 25px auto;
+    border: none;
+    
+}
+
+.main-cont {
+    margin: 0;
+}
+
+.top-logo {
+    width: 128px;
+    height: 139px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+.account-access {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 10px;
+    padding: 25px;
+    margin-left: 250px;
+}
+
+.login {
+    margin: 0 auto;
+    
+}
+
+.login > * {
+        height: 45px;
+        width: 85%;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 15px;
+        margin: 5px auto;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: bold;
+}
