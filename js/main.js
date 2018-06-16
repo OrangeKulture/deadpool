@@ -70,9 +70,7 @@ $(document).ready(function(){
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser){
                 window.location = "games.html";
-            }else {
-                toastr.success('You have been logged out')
-            }
+            }else {}
         });
 
 

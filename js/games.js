@@ -77,14 +77,17 @@ $(document).ready(function(){
             toastr.success('You are now logged in!')
 
             // Games which have already been predicted are disabled
-            let tempBoard = localStorage.getItem(loggedUser);
-            let board = JSON.parse(tempBoard);
-            for(let i =0;i<board.length;i++){
-                let field = board[i].slice(4);
-                $(`#g${field}s1`).prop('disabled',true);
-                $(`#g${field}s2`).prop('disabled',true);
-                $(`#${field}`).prop('disabled',true);
+            if(retArray!==null){
+                let tempBoard = localStorage.getItem(loggedUser);
+                let board = JSON.parse(tempBoard);
+                for(let i = 0;i<board.length;i++){
+                    let field = board[i].slice(4);
+                    $(`#g${field}s1`).prop('disabled',true);
+                    $(`#g${field}s2`).prop('disabled',true);
+                    $(`#${field}`).prop('disabled',true);
+                }
             }
+            
 
             dbRef.ref("profiles/"+loggedUser+"/info")
             .on('child_added', (snap) => {
