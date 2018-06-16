@@ -53,18 +53,17 @@ $(document).ready(function(){
                 [myTeam2]: myScore2,
                 'time': Date.now(),
             });
-
+            toastr.success('Your results have been saved!');
             if(retArray===null){
                 tempArray.push(gameNumber);
                 localStorage.setItem(loggedUser,JSON.stringify(tempArray));
-                return true;
             }else {
                 tempArray = JSON.parse(retArray);
                 tempArray.push(gameNumber);
                 localStorage.setItem(loggedUser,JSON.stringify(tempArray));
             }
 
-            toastr.success('Your results have been saved!');
+            
         }
 
     })
