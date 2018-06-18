@@ -17,8 +17,8 @@ $(document).ready(function(){
     //Board restriction handler
     const restrictBoard = (array) => {
         for(let i = 0;i<array.length;i++){
-            $(`#g${array[i]}s1`).prop('disabled',true);
-            $(`#g${array[i]}s2`).prop('disabled',true);
+            $(`#g${array[i]}s1`).prop('readonly',true);
+            $(`#g${array[i]}s2`).prop('readonly',true);
             $(`#${array[i]}`).prop('disabled',true);
         }
     }
@@ -81,44 +81,45 @@ $(document).ready(function(){
                 $('#dispUser').text(dispName);
             })
 
-            // populate submitted picks
-            // dbRef.ref('profiles/'+loggedUser+'/games')
-            // .once('value', (snap) => {
-            //     snap.forEach((game) => {
-            //         for(const team in game){
-            //             console.log(team);
-            //         }
-            //     })
-            // })
-
+            // Total points display
+            dbRef.ref("profiles/"+loggedUser+"/points")
+            .on('child_added', (snap) => {
+                let totalPoints = snap.val();
+                $('.user-points').text(totalPoints);
+            })
 
             // Predictions already entered
             let childRef = dbRef.ref(`profiles/${loggedUser}/hasBet`);
             childRef.on('child_added', (snap) => {
                 snap.forEach((child)=>{
-                    playedGames.push(child.key.slice(4));
-
-                    // dbRef.ref(`profiles/${loggedUser}/games/${child.key}`)
-                    // .once('value', (snap) => {
-                    //     let obj = snap.val();
-                    //     for(let key in obj){
-                    //         let team1 = $(`#g${child.key.slice(4)}t1`);
-                    //         let team2 = `#g${child.key.slice(4)}t1`
-                    //         console.log(key);
-                    //     }
-                    // })
+                    const primeKey = child.key.slice(4);
+                    playedGames.push(primeKey);
+                    let board = dbRef.ref(`profiles/${loggedUser}/games`).child(child.key)
+                    .once('value',(snap) => {
+                        let game = snap.val();
+                        for(const key in game){
+                            let firstTeam = $(`#g${primeKey}t1`).text();
+                            let secondTeam = $(`#g${primeKey}t2`).text();
+                            if(firstTeam===key){
+                                $(`#g${primeKey}s1`).val(game[key]);
+                            }else if(secondTeam===key){
+                                $(`#g${primeKey}s2`).val(game[key]);
+                            }
+                        }
+                    })
                 }) 
             })
 
-            // Games which have already been predicted are disabled
             childRef.once('value', (snap) => {
                 snap.forEach((child)=>{
                     let restrictGame = child.key.slice(4)
-                    $(`#g${restrictGame}s1`).prop('disabled',true);
-                    $(`#g${restrictGame}s2`).prop('disabled',true);
+                    $(`#g${restrictGame}s1`).prop('readonly',true);
+                    $(`#g${restrictGame}s2`).prop('readonly',true);
                     $(`#${restrictGame}`).prop('disabled',true);
                 }) 
             })
+
+
             
             
         }else {
