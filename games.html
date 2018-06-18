@@ -33,7 +33,7 @@
                     <p class="username"> &nbsp;Total Points: <span class="user-points"></span></p>
                 </div>
                 <div class="logout">
-                    <button class="btn btn-info" id="leaderboard">Leaderboard</button>
+                    <button class="btn btn-info" id="leaderboard" data-toggle="modal" data-target="#leaderB">Leaderboard</button>
                     <button class="btn btn-danger" id="logout">Logout</button>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="game-box text-center">
                         <div class="game-flag"><img src="images/teams/rus.png" class="img-responsive"></div>
-                        <div class="game-team"><h4 id="g17t1">Rusia</h4></div>
+                        <div class="game-team"><h4 id="g17t1">Russia</h4></div>
                         <div class="game-scorebox"><input type="text" class="score-input" id="g17s1" maxlength="1"></div>
                         <div class="vs"><h2>VS</h2></div>
                         <div class="game-scorebox"><input type="text" class="score-input" id="g17s2" maxlength="1"></div>
@@ -275,18 +275,340 @@
                         <div class="game-btn"><button class="btn btn-default" id="23">Submit</button></div>
                     </div>
                     <div class="game-box text-center">
-                        <div class="game-flag"><img src="images/teams/rus.png" class="img-responsive"></div>
-                        <div class="game-team"><h4 id="g24t1">Rusia</h4></div>
+                        <div class="game-flag"><img src="images/teams/bra.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g24t1">Brazil</h4></div>
                         <div class="game-scorebox"><input type="text" class="score-input" id="g24s1" maxlength="1"></div>
                         <div class="vs"><h2>VS</h2></div>
                         <div class="game-scorebox"><input type="text" class="score-input" id="g24s2" maxlength="1"></div>
-                        <div class="game-team"><h4 id="g24t2">Arabia Saudita</h4></div>
-                        <div class="game-flag"><img src="images/teams/ksa.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g24t2">Costa Rica</h4></div>
+                        <div class="game-flag"><img src="images/teams/crc.png" class="img-responsive"></div>
                         <div class="game-btn"><button class="btn btn-default" id="24">Submit</button></div>
                     </div>
                 </div>
 
-                <div class="left-col"></div>
+
+
+                <div class="left-col">
+                    <div class="game-box text-center game1">
+                        <div class="game-flag"><img src="images/teams/nga.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g25t1">Nigeria</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g25s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g25s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g25t2">Iceland</h4></div>
+                        <div class="game-flag"><img src="images/teams/isl.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="25">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center game2">
+                        <div class="game-flag"><img src="images/teams/srb.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g26t1">Serbia</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g26s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g26s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g26t2">Switzerland</h4></div>
+                        <div class="game-flag"><img src="images/teams/sui.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="26">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/bel.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g27t1">Belgium</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g27s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g27s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g27t2">Tunisia</h4></div>
+                        <div class="game-flag"><img src="images/teams/tun.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="27">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/kor.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g28t1">Korea Rep</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g28s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g28s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g28t2">Mexico</h4></div>
+                        <div class="game-flag"><img src="images/teams/mex.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="28">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/ger.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g29t1">Germany</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g29s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g29s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g29t2">Sweden</h4></div>
+                        <div class="game-flag"><img src="images/teams/swe.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="29">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/eng.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g30t1">England</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g30s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g30s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g30t2">Panama</h4></div>
+                        <div class="game-flag"><img src="images/teams/pan.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="30">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/jpn.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g31t1">Japan</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g31s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g31s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g31t2">Senegal</h4></div>
+                        <div class="game-flag"><img src="images/teams/sen.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="31">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/pol.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g32t1">Poland</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g32s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g32s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g832t2">Colombia</h4></div>
+                        <div class="game-flag"><img src="images/teams/col.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="32">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/uru.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g33t1">Uruguay</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g33s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g33s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g33t2">Russia</h4></div>
+                        <div class="game-flag"><img src="images/teams/rus.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="33">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/ksa.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g34t1">Saudi Arabia</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g34s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g34s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g34t2">Egypt</h4></div>
+                        <div class="game-flag"><img src="images/teams/egy.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="34">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/esp.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g35t1">Spain</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g35s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g35s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g35t2">Morocco</h4></div>
+                        <div class="game-flag"><img src="images/teams/mar.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="35">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/irn.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g36t1">IR Iran</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g362s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g362s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g36t2">Portugal</h4></div>
+                        <div class="game-flag"><img src="images/teams/por.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="36">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/aus.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g37t1">Australia</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g37s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g37s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g37t2">Peru</h4></div>
+                        <div class="game-flag"><img src="images/teams/per.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="37">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/den.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g38t1">Denmark</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g38s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g38s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g38t2">France</h4></div>
+                        <div class="game-flag"><img src="images/teams/fra.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="38">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/nga.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g39t1">Nigeria</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g39s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g39s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g39t2">Argentina</h4></div>
+                        <div class="game-flag"><img src="images/teams/arg.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="39">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/isl.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g40t1">Iceland</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g40s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g40s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g40t2">Croatia</h4></div>
+                        <div class="game-flag"><img src="images/teams/cro.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="40">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/kor.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g41t1">Korea Rep</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g41s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g41s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g41t2">Germany</h4></div>
+                        <div class="game-flag"><img src="images/teams/ger.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="41">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/mex.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g42t1">Mexico</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g42s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g42s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g42t2">Sweden</h4></div>
+                        <div class="game-flag"><img src="images/teams/swe.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="42">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/srb.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g43t1">Serbia</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g43s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g43s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g43t2">Brazil</h4></div>
+                        <div class="game-flag"><img src="images/teams/bra.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="43">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/sui.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g44t1">Switzerland</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g44s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g44s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g44t2">Costa Rica</h4></div>
+                        <div class="game-flag"><img src="images/teams/crc.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="44">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/jpn.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g45t1">Japan</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g45s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g45s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g45t2">Poland</h4></div>
+                        <div class="game-flag"><img src="images/teams/pol.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="45">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/sen.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g46t1">Senegal</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g46s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g46s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g46t2">Colombia</h4></div>
+                        <div class="game-flag"><img src="images/teams/col.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="46">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/pan.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g47t1">Panama</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g47s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g47s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g47t2">Tunisia</h4></div>
+                        <div class="game-flag"><img src="images/teams/tun.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="47">Submit</button></div>
+                    </div>
+                    <div class="game-box text-center">
+                        <div class="game-flag"><img src="images/teams/eng.png" class="img-responsive"></div>
+                        <div class="game-team"><h4 id="g48t1">England</h4></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g48s1" maxlength="1"></div>
+                        <div class="vs"><h2>VS</h2></div>
+                        <div class="game-scorebox"><input type="text" class="score-input" id="g48s2" maxlength="1"></div>
+                        <div class="game-team"><h4 id="g48t2">Belgium</h4></div>
+                        <div class="game-flag"><img src="images/teams/bel.png" class="img-responsive"></div>
+                        <div class="game-btn"><button class="btn btn-default" id="48">Submit</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="leaderB" class="modal fade" role="dialog">
+            <div class="modal-dialog text-center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Russia 2018 - Leaderboard</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="leader-content">
+                            <div class="titles">
+                                <h4>Position</h4>
+                                <h4>Name</h4>
+                                <h4>Points</h4>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>1</h3></div>
+                                <div class="player"><h5>Albert</h5></div>
+                                <div class="total-points"><h5>15</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>2</h3></div>
+                                <div class="player"><h5>Roywell</h5></div>
+                                <div class="total-points"><h5>12</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>3</h3></div>
+                                <div class="player"><h5>Ace</h5></div>
+                                <div class="total-points"><h5>9</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>4</h3></div>
+                                <div class="player"><h5>Jorge A</h5></div>
+                                <div class="total-points"><h5>8</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>4</h3></div>
+                                <div class="player"><h5>Josue</h5></div>
+                                <div class="total-points"><h5>8</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>5</h3></div>
+                                <div class="player"><h5>Adam</h5></div>
+                                <div class="total-points"><h5>7</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>5</h3></div>
+                                <div class="player"><h5>Bernhard</h5></div>
+                                <div class="total-points"><h5>7</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>5</h3></div>
+                                <div class="player"><h5>Walter</h5></div>
+                                <div class="total-points"><h5>7</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>6</h3></div>
+                                <div class="player"><h5>Jason</h5></div>
+                                <div class="total-points"><h5>6</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>6</h3></div>
+                                <div class="player"><h5>Paul</h5></div>
+                                <div class="total-points"><h5>6</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>7</h3></div>
+                                <div class="player"><h5>Jorge M</h5></div>
+                                <div class="total-points"><h5>5</h5></div>
+                            </div>
+                            <div class="entry">
+                                <div class="position"><h3>7</h3></div>
+                                <div class="player"><h5>Vinny</h5></div>
+                                <div class="total-points"><h5>5</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

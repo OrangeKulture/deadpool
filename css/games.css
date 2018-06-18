@@ -3,7 +3,7 @@ body {
     background: url('../images/games_bg1.jpg')no-repeat top center fixed;
 }
 
-p {
+p, h3, h4, h5 {
     margin: 0;
 }
 
@@ -89,8 +89,21 @@ p {
     font-weight: bold;
 }
 
+.entry, .titles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-/* .game-flag {background:lime;}
+.entry > *, .titles > *{
+    width: 33%;
+    margin: 15px 0;
+}
 
-.game-scorebox {background:pink;}
-.vs {background:salmon;} */
+.modal-header {
+    background: #ad1d1d;
+}
+
+.modal-header > h4 {
+    color: #fff;
+}
