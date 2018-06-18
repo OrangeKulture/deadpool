@@ -12,6 +12,16 @@ $(document).ready(function(){
     
     firebase.initializeApp(config);
     let loggedUser = null;
+    let playedGames = [];
+
+    //Board restriction handler
+    const restrictBoard = (array) => {
+        for(let i = 0;i<array.length;i++){
+            $(`#g${array[i]}s1`).prop('disabled',true);
+            $(`#g${array[i]}s2`).prop('disabled',true);
+            $(`#${array[i]}`).prop('disabled',true);
+        }
+    }
 
     // Database reference
     const dbRef = firebase.database();
@@ -20,17 +30,12 @@ $(document).ready(function(){
     const logoutBtn = document.getElementById('logout');
     const auth = firebase.auth();
 
-    let retArray = localStorage.getItem(loggedUser);
-    let tempArray = [];
-
     // Listeners
     logoutBtn.addEventListener('click', e => {
         auth.signOut();
         window.location = "index.html";
     })
-
     
-
     $('.game-btn > button').on('click',(e) => {
         if(!e) e = window.event;
         let gameSelect = e.target.id;
@@ -44,7 +49,7 @@ $(document).ready(function(){
         let myScore2 = score2.value;
 
         if(myScore1 === "" || myScore2 === "" || isNaN(myScore1) || isNaN(myScore2)) {
-            toastr.warning('Please fill out the scores correctly before submitting');
+            toastr.warning('Please fill out the scores correctly before submitting'); 
         }else {
 
             dbRef.ref(`profiles/${loggedUser}/games/${gameNumber}`)
@@ -53,19 +58,13 @@ $(document).ready(function(){
                 [myTeam2]: myScore2,
                 'time': Date.now(),
             });
-            toastr.success('Your results have been saved!');
-            if(retArray===null){
-                tempArray.push(gameNumber);
-                localStorage.setItem(loggedUser,JSON.stringify(tempArray));
-            }else {
-                tempArray = JSON.parse(retArray);
-                tempArray.push(gameNumber);
-                localStorage.setItem(loggedUser,JSON.stringify(tempArray));
-            }
-
-            
+            toastr.success('Your results have been saved!');  
         }
-
+        let childRef = dbRef.ref(`profiles/${loggedUser}/hasBet`);
+        childRef.child(gameNumber).set({
+            [gameNumber]: true
+        })
+        restrictBoard(playedGames);
     })
     
 
@@ -75,28 +74,59 @@ $(document).ready(function(){
             loggedUser = firebaseUser.uid;
             toastr.success('You are now logged in!')
 
-            // Games which have already been predicted are disabled
-            if(retArray!==null){
-                let tempBoard = localStorage.getItem(loggedUser);
-                let board = JSON.parse(tempBoard);
-                for(let i = 0;i<board.length;i++){
-                    let field = board[i].slice(4);
-                    $(`#g${field}s1`).prop('disabled',true);
-                    $(`#g${field}s2`).prop('disabled',true);
-                    $(`#${field}`).prop('disabled',true);
-                }
-            }
-            
-
+            // Username display
             dbRef.ref("profiles/"+loggedUser+"/info")
             .on('child_added', (snap) => {
                 let dispName = snap.val();
                 $('#dispUser').text(dispName);
             })
 
+            // populate submitted picks
+            dbRef.ref('profiles/'+loggedUser+'/games')
+            .once('value', (snap) => {
+                snap.forEach((game) => {
+                    for(const team in game){
+                        console.log(team);
+                    }
+                })
+            })
+
+
+            // Predictions already entered
+            let childRef = dbRef.ref(`profiles/${loggedUser}/hasBet`);
+            childRef.on('child_added', (snap) => {
+                snap.forEach((child)=>{
+                    playedGames.push(child.key.slice(4));
+
+                    // dbRef.ref(`profiles/${loggedUser}/games/${child.key}`)
+                    // .once('value', (snap) => {
+                    //     let obj = snap.val();
+                    //     for(let key in obj){
+                    //         let team1 = $(`#g${child.key.slice(4)}t1`);
+                    //         let team2 = `#g${child.key.slice(4)}t1`
+                    //         console.log(key);
+                    //     }
+                    // })
+                }) 
+            })
+
+            // Games which have already been predicted are disabled
+            childRef.once('value', (snap) => {
+                snap.forEach((child)=>{
+                    let restrictGame = child.key.slice(4)
+                    $(`#g${restrictGame}s1`).prop('disabled',true);
+                    $(`#g${restrictGame}s2`).prop('disabled',true);
+                    $(`#${restrictGame}`).prop('disabled',true);
+                }) 
+            })
+            
+            
         }else {
             window.location = "index.html";
         }
     });
+
+    
+
 
 })
