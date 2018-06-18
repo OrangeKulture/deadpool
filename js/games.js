@@ -82,14 +82,14 @@ $(document).ready(function(){
             })
 
             // populate submitted picks
-            dbRef.ref('profiles/'+loggedUser+'/games')
-            .once('value', (snap) => {
-                snap.forEach((game) => {
-                    for(const team in game){
-                        console.log(team);
-                    }
-                })
-            })
+            // dbRef.ref('profiles/'+loggedUser+'/games')
+            // .once('value', (snap) => {
+            //     snap.forEach((game) => {
+            //         for(const team in game){
+            //             console.log(team);
+            //         }
+            //     })
+            // })
 
 
             // Predictions already entered
