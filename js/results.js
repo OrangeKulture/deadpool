@@ -28,6 +28,19 @@ $(document).ready(function(){
         if(firebaseUser){
             loggedUser = firebaseUser.uid;
 
+            dbRef.ref('profiles').on('child_added', snapshot => {
+                snapshot.forEach(item => {
+                    let entry = item.val();
+                    let name = entry.display;
+                    console.log(name);
+                    // if(entry.Game1){
+                    //     if(entry.Game1.Game1!=true){
+                    //         console.log(entry.Game1);
+                    //     }
+                    // }
+                })
+            })
+
             // Username display
             dbRef.ref("profiles/"+loggedUser+"/info")
             .on('child_added', (snap) => {
@@ -41,7 +54,6 @@ $(document).ready(function(){
                 let totalPoints = snap.val();
                 $('.user-points').text(totalPoints);
             })
-
 
         } else {
             window.location = 'index.html';

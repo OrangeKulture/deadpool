@@ -29,6 +29,18 @@ body {
     color: #ad1d1d;
 }
 
+.results-main {
+    width: 90%;
+    margin: 0 auto;
+    height: 650px;
+}
+
+.game-result-box {
+    width: 30%;
+    height: 250px;
+    background: slategray;
+}
+
 
 @media only screen 
 and (min-width : 320px) 
