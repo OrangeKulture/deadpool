@@ -1,0 +1,65 @@
+body {
+    font-family: 'Exo', sans-serif;
+    background: url('../images/games_bg1.jpg')no-repeat top center fixed;
+}
+
+.username {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.user-info {
+    display: flex;
+}
+
+.head {
+    width: 100%;
+    padding: 20px;
+}
+
+.head > .container {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider, .user-points {
+    color: #ad1d1d;
+}
+
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+
+    .head {
+        padding: 5px;
+    }
+
+    .head > .container {
+        width: 100%;
+        display: initial;
+    }
+
+    .head > .container > * {
+        width: 100%;
+        display: flex;
+    }
+
+    .logoutDiv {
+        padding-top: 15px;
+        display: flex;
+    }
+
+    .logoutDiv > * {
+        margin-right: 5px;
+    }
+    
+
+    .username {
+        font-size: 1.2em;
+    }
+
+}

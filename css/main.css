@@ -45,16 +45,45 @@ hr {
 }
 
 .login > * {
-        height: 45px;
         width: 85%;
         border-radius: 5px;
         border: none;
         outline: none;
         padding: 15px;
         margin: 5px auto;
+        font-weight: bold;
+}
+
+input::placeholder {
+    font-weight: 400;
 }
 
 .btn {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1024px) { 
+
+    body {
+        font-family: 'Quicksand', sans-serif;
+        background: url('../images/main_bg1.jpg')no-repeat top center;
+    }
+
+    .main-cont {
+        width: 100%;
+    }
+
+    .account-access {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0;
+        border-radius: 10px;
+        padding: 0;
+        margin-left: 0;
+    }
+
 }
