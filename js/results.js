@@ -22,8 +22,6 @@ $(document).ready(function(){
         window.location = 'games.html';
     })
 
-
-
     auth.onAuthStateChanged( firebaseUser => {
         if(firebaseUser){
             loggedUser = firebaseUser.uid;
@@ -31,8 +29,8 @@ $(document).ready(function(){
             dbRef.ref('profiles').on('child_added', snapshot => {
                 snapshot.forEach(item => {
                     let entry = item.val();
-                    let name = entry.display;
-                    console.log(name);
+                    // let name = entry.display;
+                    
                     // if(entry.Game1){
                     //     if(entry.Game1.Game1!=true){
                     //         console.log(entry.Game1);

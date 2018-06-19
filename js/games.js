@@ -36,9 +36,9 @@ $(document).ready(function(){
         window.location = "index.html";
     })
 
-    $('#results').on('click', () => {
-        window.location = 'results.html';
-    })
+    // $('#results').on('click', () => {
+    //     window.location = 'results.html';
+    // })
     
     $('.game-btn > button').on('click', e => {
         if(!e) e = window.event;
