@@ -184,6 +184,13 @@ and (max-width : 480px) {
         padding: 5px;
         grid-template-columns: 1.5fr 1.3fr 1fr 1.2fr 1fr 1.3fr 1.5fr 1.5fr;
     }
+
+    .score-input {
+        max-width: 30px;
+        height: 35px;
+        text-align: center;
+        font-size: 1.2em;
+    }
         
 
 }
