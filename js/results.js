@@ -25,18 +25,41 @@ $(document).ready(function(){
     auth.onAuthStateChanged( firebaseUser => {
         if(firebaseUser){
             loggedUser = firebaseUser.uid;
-
+    
             dbRef.ref('profiles').on('child_added', snapshot => {
-                snapshot.forEach(item => {
-                    let entry = item.val();
-                    // let name = entry.display;
+                let count = 1;
+                let myInfo = snapshot.val();
+                let dispName = myInfo.info.display;
+                console.log(`The picks for ${dispName}`);
+                $('.results-main').append(`
+                <div class="player style="">
+                    <div>${dispName}:</div>
+                </div>
+                `)
+                for(key in myInfo.games){
+                    console.log(`The KEY is: ${key}`)
+                    $('.results-main').append(`
+                    <div class="gameNum">
+                        <div>${key}:</div>
+                    </div>
+                    `)
+                    let some = myInfo.games[key];
+                    for(index in some){
+                        if(index!='time'){
+                            console.log(`${index} is: ${some[index]}`);
+                            $('.results-main').append(`<br><p>${index}: ${some[index]}<br>`)
+                        }
                     
-                    // if(entry.Game1){
-                    //     if(entry.Game1.Game1!=true){
-                    //         console.log(entry.Game1);
-                    //     }
-                    // }
-                })
+                    }
+                    
+                }
+                
+                // if(myInfo.games['Game1']){
+                //     $('.game-result-box').append(`
+                //         <p> ${dispName} dice que -> Russia: ${myInfo.games['Game1']['Russia']} - ${myInfo.games['Game1']['Saudi Arabia']} Saudi Arabia </p><br/>
+                //     `)
+                // }
+                
             })
 
             // Username display

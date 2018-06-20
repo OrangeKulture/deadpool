@@ -33,11 +33,17 @@ body {
     width: 90%;
     margin: 0 auto;
     height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.results-main > * {
+    margin: 10px;
 }
 
 .game-result-box {
     width: 30%;
-    height: 250px;
+    height: 520px;
     background: slategray;
 }
 
