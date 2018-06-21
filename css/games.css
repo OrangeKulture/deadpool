@@ -122,6 +122,11 @@ p, h3, h4, h5 {
     color: #ad1d1d;
 }
 
+#logout, #leaderboard {
+    box-shadow:0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12)
+}
+
+
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 480px) {
