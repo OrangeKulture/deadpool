@@ -213,4 +213,9 @@ and (max-width : 1024px) {
 
     }
 
+    body {
+        font-family: 'Exo', sans-serif;
+        background: #E8E6D9;
+    }
+
 }
