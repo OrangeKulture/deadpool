@@ -54,6 +54,7 @@ $(document).ready(function(){
 
         if(myScore1 === "" || myScore2 === "" || isNaN(myScore1) || isNaN(myScore2)) {
             toastr.warning('Please fill out the scores correctly before submitting'); 
+            return false;
         }else {
 
             dbRef.ref(`profiles/${loggedUser}/games/${gameNumber}`)
