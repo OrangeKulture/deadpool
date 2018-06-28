@@ -69,7 +69,7 @@ $(document).ready(function(){
         // Real time listener
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser){
-                window.location = "games.html";
+                window.location = "llave.html";
             }else {}
         });
 

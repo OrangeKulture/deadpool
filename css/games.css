@@ -29,7 +29,7 @@ p, h3, h4, h5 {
     justify-content: space-between;
 }
 
-.main-content {
+.main-content, .llave-content {
     width: 70%;
     margin: 0 auto;
 }
@@ -122,7 +122,7 @@ p, h3, h4, h5 {
     color: #ad1d1d;
 }
 
-#logout, #leaderboard {
+#logout, #leaderboard, #knockout {
     box-shadow:0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12)
 }
 
@@ -197,7 +197,6 @@ and (max-width : 480px) {
         font-size: 1.2em;
     }
         
-
 }
 
 @media only screen 
@@ -210,7 +209,6 @@ and (max-width : 1024px) {
     
     .matchups {
         width: 100%;
-
     }
 
     body {
@@ -219,3 +217,5 @@ and (max-width : 1024px) {
     }
 
 }
+
+

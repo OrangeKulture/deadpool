@@ -36,9 +36,13 @@ $(document).ready(function(){
         window.location = "index.html";
     })
 
-    // $('#results').on('click', () => {
-    //     window.location = 'results.html';
-    // })
+    $('#knockout').on('click', () => {
+        window.location = 'llave.html';
+    })
+
+    $('#groups').on('click', () => {
+        window.location = 'games.html';
+    })
     
     $('.game-btn > button').on('click', e => {
         if(!e) e = window.event;

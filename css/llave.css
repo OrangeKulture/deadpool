@@ -1,0 +1,246 @@
+body {
+    font-family: 'Exo', sans-serif;
+    background: url('../images/games_bg1.jpg')no-repeat top center fixed;
+}
+
+p, h3, h4, h5 {
+    margin: 0;
+}
+
+.username {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.user-info {
+    display: flex;
+}
+
+.head {
+    width: 100%;
+    padding: 20px;
+}
+
+.head > .container {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.llave-content{
+    height: 100%;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+} 
+
+.llave-content > * {
+    width: 50%;
+    height: 550px;
+    margin: 0 5px;
+}
+
+.left-bracket, .right-bracket {
+    display: flex;
+}
+
+.left-bracket > *, .right-bracket > * {
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1%;
+}
+
+
+.octavos {
+    /* background: skyblue; */
+    justify-content: space-between;
+}
+
+.cuartos {
+    /* background: salmon; */
+    justify-content: space-around;
+}
+
+.semis {
+    /* background: lime; */
+    justify-content: center;
+}
+
+.game-container {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.team1, .team2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.team1 {
+    background: rgba(201, 194, 176,0.6)
+}
+
+.team2 {
+    background: rgba(173, 167, 150,0.6)
+}
+
+.flag {
+    width: 36px;
+    height: 17px;
+}
+
+.name > p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.score > input {
+    width: 25px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.btn-default {
+    color: #ad1d1d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#logout, #leaderboard, #groups {
+    box-shadow:0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12)
+}
+
+.entry, .titles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.entry > *, .titles > *{
+    width: 33%;
+    margin: 15px 0;
+}
+
+.modal-header {
+    background: #ad1d1d;
+}
+
+.modal-header > h4 {
+    color: #fff;
+}
+
+.modal-header > p {
+    padding-top: 5px;
+    color: #fff;
+}
+
+.entry .player > h5 {
+    font-weight: bold;
+}
+
+.position > h3 {
+    color: #ad1d1d;
+}
+
+.divider, .user-points {
+    color: #ad1d1d;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+
+    .head {
+        padding: 5px;
+    }
+
+    .head > .container {
+        width: 100%;
+        display: initial;
+    }
+
+    .head > .container > * {
+        width: 100%;
+        display: flex;
+    }
+
+    .logoutDiv {
+        padding-top: 15px;
+        display: flex;
+    }
+
+    .logoutDiv > * {
+        margin-right: 5px;
+    }
+    
+    .main-content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .matchups {
+        display: initial;
+        padding: 0;
+    }
+    
+    .matchups > * {
+        width: 96%;
+        margin: 0 10px;
+    }
+
+    .game-team > h4 {
+        font-weight: bold;
+        font-size: 0.95em;
+    }
+
+    .username {
+        font-size: 1.2em;
+    }
+
+    .vs > h2 {
+        font-size: 15px;
+    }
+
+    .game-box {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+        padding: 5px;
+        grid-template-columns: 1.5fr 1.3fr 1fr 1.2fr 1fr 1.3fr 1.5fr 1.5fr;
+    }
+
+    .score-input {
+        max-width: 30px;
+        height: 35px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+        
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1024px) {
+
+    .llave-content{
+        height: 100%;
+        display: initial;
+        width: 100%;
+    } 
+    
+    .llave-content > * {
+        width: 100%;
+    }
+
+}

@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet">
 
         <link rel="stylesheet" href="css/toastr.min.css">
-        <link rel="stylesheet" href="css/games.css">
+        <link rel="stylesheet" href="css/llave.css">
         
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
@@ -34,17 +34,413 @@
                     <p class="username"> &nbsp;Total Points: <span class="user-points"></span></p>
                 </div>
                 <div class="logoutDiv">
+                    <button class="btn btn-info" id="groups">Groups</button>
                     <button class="btn btn-info" id="leaderboard" data-toggle="modal" data-target="#leaderB">Leaderboard</button>
                     <button class="btn btn-danger" id="logout">Logout</button>
                 </div>
             </div>
         </div>
 
-        <div class="main-content">
-        
+        <div class="llave-content">
+
+            <div class="left-bracket">
+                <div class="octavos">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/fra.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g49t1">France</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g49s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/arg.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g49t2">Argentina</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g49s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="49">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/uru.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g50t1">Uruguay</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g50s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/por.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g50t2">Portugal</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g50s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="50">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/bra.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g53t1">Brazil</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g53s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/mex.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g53t2">Mexico</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g53s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="53">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/bel.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g54t1">Belgium</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g54s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/jpn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g54t2">Japan</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g54s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="54">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cuartos">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g56t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g56s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g56t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g56s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="56">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g57t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g57s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g57t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g57s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="57">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="semis">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g60t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g60s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g60t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g60s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="60">submit</button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+            <div class="right-bracket">
+                <div class="semis">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g61t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g61s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g61t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g61s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="61">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cuartos">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g58t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g58s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g58t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g58s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="58">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g59t1">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g59s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/ukn.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g59t2">TBD</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g59s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="59">submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="octavos">
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/esp.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g51t1">Spain</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g51s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/rus.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g51t2">Russia</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g51s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="51">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/cro.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g52t1">Croatia</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g52s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/den.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g52t2">Denmark</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g52s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="52">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/swe.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g55t1">Sweden</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g55s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/sui.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g55t2">Switzerland</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g55s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="55">submit</button>
+                        </div>
+                    </div>
+                    <div class="game-container">
+                        <div class="team1">
+                            <div class="flag">
+                                <img src="images/teams/col.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g56t1">Colombia</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g56s1">
+                            </div>
+                        </div>
+                        <div class="team2">
+                            <div class="flag">
+                                <img src="images/teams/eng.png" class="img-responsive">
+                            </div>
+                            <div class="name">
+                                <p id="g56t2">England</p>
+                            </div>
+                            <div class="score">
+                                <input type="text" maxlength="1" id="g56s2">
+                            </div>
+                        </div>
+                        <div class="game-btn">
+                            <button class="btn btn-default btn-block" id="56">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="leaderB" class="modal fade" role="dialog">
+        <!-- <div id="leaderB" class="modal fade" role="dialog">
             <div class="modal-dialog text-center">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -125,7 +521,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <script src="js/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
