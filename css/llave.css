@@ -87,11 +87,11 @@ p, h3, h4, h5 {
 }
 
 .team1 {
-    background: rgba(201, 194, 176,0.6)
+    background: rgba(201, 194, 176,0.8)
 }
 
 .team2 {
-    background: rgba(173, 167, 150,0.6)
+    background: rgba(173, 167, 150,0.8)
 }
 
 .flag {
@@ -155,6 +155,11 @@ p, h3, h4, h5 {
 
 .divider, .user-points {
     color: #ad1d1d;
+}
+
+.banner > h3 {
+    text-transform: uppercase;
+    padding-top: 25px;
 }
 
 @media only screen 
